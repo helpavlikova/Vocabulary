@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="470.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentController" stylesheets="@excercise.css">
+   <children>
+      <TabPane layoutX="152.0" layoutY="49.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Slovníček">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="76.0" layoutY="96.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="SOMETIMES">
+                                 <children>
+                                    <TableView fx:id="wordTable" prefHeight="327.0" prefWidth="224.0" VBox.vgrow="SOMETIMES">
+                                      <columns>
+                                        <TableColumn fx:id="foreignWord" prefWidth="109.0" text="Slovíčko" />
+                                        <TableColumn fx:id="nativeWord" prefWidth="114.0" text="Překlad" />
+                                      </columns>
+                                    </TableView>
+                                    <Button mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="31.0" prefWidth="71.0" text="Vymazat" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="SOMETIMES">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="17.0" prefWidth="106.0" text="Výběr jazyka:">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER" prefHeight="68.0" prefWidth="224.0">
+                                       <children>
+                                          <ComboBox fx:id="langComboBox" onAction="#changeLanguageAction" prefWidth="150.0" />
+                                          <Button mnemonicParsing="false" onAction="#newLanguageButtonAction" prefHeight="22.0" prefWidth="27.0" text="+">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="258.0" text="Vložení nového slova" VBox.vgrow="SOMETIMES">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane>
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="78.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="146.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" text="Slovo:" />
+                                          <Label text="Překlad:" GridPane.rowIndex="1" />
+                                          <TextField fx:id="translTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="exprTextField" GridPane.columnIndex="1" />
+                                          <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#addNewButtonAction" prefHeight="30.0" prefWidth="82.0" text="Přidat" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </GridPane>
+                                    <Label fx:id="testLabel" alignment="CENTER" prefHeight="19.0" prefWidth="240.0" VBox.vgrow="SOMETIMES" />
+                                    <Button mnemonicParsing="false" onAction="#excerciseButtonAction" prefHeight="31.0" prefWidth="164.0" text="Cvičení " />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

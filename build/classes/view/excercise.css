@@ -1,0 +1,41 @@
+.button{
+    -fx-text-fill: #000066;
+    -fx-background-color: #cce6ff;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 5;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#cce6ff, #aecfef);
+}
+
+.root {
+     -fx-background-image: url("light_grey_@2X.jpg");
+     -fx-text-color: #000066;
+}
+
+.combo-box{
+    -fx-text-fill: #000066;
+    -fx-background-color: #cce6ff;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 5;
+}
+
+.combo-box:hover {
+    -fx-background-color: linear-gradient(#cce6ff, #aecfef);
+}
+
+.table-view{
+    -fx-text-fill: #000066;
+    -fx-background-color: #cce6ff;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+}
+
+.table-column{
+   
+    
+}
